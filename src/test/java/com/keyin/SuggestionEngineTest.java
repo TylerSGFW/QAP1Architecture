@@ -1,4 +1,5 @@
 package com.keyin;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -7,7 +8,7 @@ import java.nio.file.Paths;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class SuggestionEngineTest {
+public class SuggestionEngineTest extends SuggestionEngine {
     @Test
     public void testCorrectWord() throws IOException, URISyntaxException {
         SuggestionEngine suggestionEngine = new SuggestionEngine();
@@ -17,7 +18,7 @@ public class SuggestionEngineTest {
         String result = suggestionEngine.generateSuggestions("correct");
 
         // The result should be an empty string because the word is correct.
-        assertEquals("", result);
+        Assertions.assertEquals("", result);
     }
 
     @Test
@@ -42,7 +43,7 @@ public class SuggestionEngineTest {
         String result = suggestionEngine.generateSuggestions("xyzzzz");
 
         // The result should be an empty string because there are no known suggestions.
-        assertEquals("", result);
+        Assertions.assertEquals("", result);
     }
 }
 
