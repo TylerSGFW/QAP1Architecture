@@ -30,8 +30,6 @@ public class SuggestionEngineTest extends SuggestionEngine {
         String result = suggestionEngine.generateSuggestions("wrod");
 
         // The result should be a list of suggested corrections.
-        // You can validate it based on the known suggestions in your dictionary.
-        // Example: assertEquals("word\nworld\nwork\n", result);
     }
 
     @Test
