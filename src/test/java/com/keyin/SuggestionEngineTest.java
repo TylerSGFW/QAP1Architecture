@@ -28,8 +28,6 @@ public class SuggestionEngineTest extends SuggestionEngine {
 
         // Provide a misspelled word with known suggestions
         String result = suggestionEngine.generateSuggestions("wrod");
-
-        // The result should be a list of suggested corrections.
     }
 
     @Test
